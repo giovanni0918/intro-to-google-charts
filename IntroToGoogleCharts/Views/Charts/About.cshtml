@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "About";
+}
+
+<div class="container-fluid">
+    <div class="col-xs-10 col-xs-offset-1">
+
+        <h3 class="heading">Project Dependencies</h3>
+        <ul>
+            <li><a href="https://bootswatch.com/paper/bootstrap.css">Bootswatch / Bootstrap Paper v3.3.7</a></li>
+            <li><a href="https://www.gstatic.com/charts/loader.js">Google Charts Loader</a></li>
+            <li><a href="https://code.jquery.com/jquery-3.2.1.js">jQuery v3.2.1</a></li>
+        </ul>
+
+        <h3 class="heading">Installation</h3>
+        <ol>
+            <li>Add project dependencies to the index's head tag</li>
+            <li>Add div with an id of chart_div1 to the index's body tag to use as entry point for the demo chart</li>
+            <li>
+                Initialize Google Charts:
+                <pre><code>google.charts.load('current', { packages: ['corechart', 'bar'] });</code></pre>
+            </li>
+            <li>
+                Define onLoad callbacks:
+                <pre><code>google.charts.setOnLoadCallback(drawChart1);</code></pre>
+            </li>
+            <li>
+                Declare labels to be used per chart:
+                <pre><code>const labels = {
+    chart1: ["Label1", "Label2", "Label3", "Label4", "Label5"],
+    chart2: ["Label1", "Label2"]
+};</code></pre>
+            </li>
+            <li>
+                Write drawChart function:
+                <pre><code>function drawChart1() {
+    var data = google.visualization.arrayToDataTable([
+        labels.chart1,
+        ["06/05", 8, 8.25, 0, 0.25],
+        ["06/06", 8, 9, 0, 1],
+        ["06/07", 8, 8, 0, 0],
+        ["06/08", 8, 7.5, 0.5, 0],
+        ["06/09", 8, 8.15, 0, 0.15]
+    ]);
+
+    var chart = new google.visualization.ColumnChart(
+        document.getElementById("chart_div1")
+    );
+
+    chart.draw(data, options.chart1);
+}</code></pre>
+            </li>
+            <li>Build and Start Debugging</li>
+        </ol>
+
+        <h3 class="heading">Usage</h3>
+        <ol>
+            <li>
+                Clone the Github repository:
+                <pre><code>git clone https://github/com/giovanni0918/intro-to-google-charts.git</code></pre>
+            </li>
+            <li>
+                Navigate into the project directory:
+                <pre><code>cd ~/Downloads/intro-to-google-charts/</code></pre>
+            </li>
+            <li>
+                Open using Visual Studio or VS Code
+                <pre><code>code .</code></pre>
+            </li>
+        </ol>
+    </div>
+</div>

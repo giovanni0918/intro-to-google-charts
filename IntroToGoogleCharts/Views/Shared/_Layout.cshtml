@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="author" content="Giovanni Orlando">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0c84e4">
+
+    <title>@ViewBag.Title - Intro to Google Charts</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+    <!-- Google js api -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+<body>
+
+    @{ Html.RenderPartial("_NavigationBar"); }
+
+    <main class="container-fluid">
+        @RenderBody()
+        <hr />
+        <footer class="container">
+            <p>&copy; @DateTime.Now.Year - Giovanni Orlando</p>
+        </footer>
+    </main>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
