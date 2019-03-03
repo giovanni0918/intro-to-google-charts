@@ -8,6 +8,7 @@ html, body {
     margin: 0;
     padding: 0;
     border: none;
+    color: black;
 }
 
 main {
@@ -31,4 +32,10 @@ main {
 
 .heading {
     color: dodgerblue;
+}
+
+pre code {    
+    color: black;
+    font-weight: 600;
+    font-size: 1.3em;
 }

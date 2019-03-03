@@ -24,7 +24,7 @@ namespace IntroToGoogleCharts
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-paper.css",
+                      "~/Content/bootstrap-materia.css",
                       "~/Content/site.css"));
         }
     }
